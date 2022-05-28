@@ -1,0 +1,28 @@
+{
+    "presets": [
+        [
+            "@babel/env",
+            {
+                "targets": {
+                    "browsers": "> 0.25%, ie 11, not op_mini all, not dead"
+                },
+                "corejs": "3.22.5",
+                "useBuiltIns": "usage"
+            }
+        ]
+    ],
+    "plugins": [
+        "@babel/proposal-object-rest-spread",
+        "@babel/proposal-class-properties",
+        [
+            "module-resolver",
+            {
+                "root": ["./"],
+                "alias": {
+                    "@": "./src",
+                    "_root": "."
+                }
+            }
+        ]
+    ]
+}
